@@ -24,4 +24,22 @@ function div(x, y) {
   return x / y;
 }
 
-module.exports = { add, sub, mul, div };
+function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Modulo by zero');
+  }
+  return a % b;
+}
+
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+function squareRoot(n) {
+  if (n < 0) {
+    throw new Error('Cannot compute square root of a negative number');
+  }
+  return Math.sqrt(n);
+}
+
+module.exports = { add, sub, mul, div, modulo, power, squareRoot };
